@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Training dan Event Teknologi Perkebunan">
+    <title>Training & Events - Teknologi dan Inovasi Perkebunan</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('2.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+        
+        .training-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+        
+        .training-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .event-date {
+            background-color: #198754;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+        
+        .event-date .day {
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+        
+        .event-date .month {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+        
+        .badge-online {
+            background-color: #0d6efd;
+        }
+        
+        .badge-offline {
+            background-color: #dc3545;
+        }
+        
+        .badge-hybrid {
+            background-color: #6f42c1;
+        }
+        
+        .trainer-profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .trainer-profile img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .calendar-section {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .course-curriculum {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .curriculum-item {
+            border-bottom: 1px solid #dee2e6;
+            padding: 10px 0;
+        }
+        
+        .curriculum-item:last-child {
+            border-bottom: none;
+        }
+        
+        .registration-form {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .featured-training {
+            border-left: 4px solid #198754;
+            padding: 20px;
+            background-color: #f8f9fa;
+            margin-bottom: 30px;
+            border-radius: 0 10px 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">TEKNOLOGI DAN INOVASI PERKEBUNAN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="technology.html">Teknologi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.php">Produk & Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="case-studies.html">Studi Kasus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="training.html">Training</a></li>
+                    <li class="nav-item"><a class="nav-link" href="partnership.html">Partnership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Training & Events</h1>
+        <p class="lead">Program Pelatihan dan Kegiatan untuk Meningkatkan Keterampilan di Bidang Teknologi Perkebunan</p>
+    </div>
+</section>
+
+<main class="container">
+    <!-- Featured Training -->
+    <section class="featured-training">
+        <div class="row">
+            <div class="col-md-8">
+                <span class="badge bg-warning mb-2">Pendaftaran Segera Ditutup</span>
+                <h2>Bootcamp Smart Farming: IoT untuk Perkebunan 4.0</h2>
+                <p class="lead">Program intensif 5 hari untuk mempelajari implementasi teknologi IoT dalam perkebunan modern.</p>
+                <p><strong>Tanggal:</strong> 15-19 Juli 2024</p>
+                <p><strong>Lokasi:</strong> Training Center - Jakarta & Online (Hybrid)</p>
+                <p><strong>Biaya:</strong> Rp 5.500.000/peserta (Early Bird: Rp 4.500.000 s/d 30 Juni)</p>
+                <a href="#register" class="btn btn-success">Daftar Sekarang</a>
+            </div>
+            <div class="col-md-4">
+                <img src="IOT INTERNET OF THINGS.jpg" class="img-fluid rounded" alt="Featured Training">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Training Filter -->
+    <section class="mb-5">
+        <div class="row">
+            <div class="col-md-6">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Cari pelatihan..." aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Cari</button>
+                </form>
+            </div>
+            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                <button class="btn btn-sm btn-outline-primary me-1 mb-1">Semua</button>
+                <button class="btn btn-sm btn-outline-primary me-1 mb-1">Online</button>
+                <button class="btn btn-sm btn-outline-primary me-1 mb-1">Offline</button>
+                <button class="btn btn-sm btn-outline-primary me-1 mb-1">Workshop</button>
+                <button class="btn btn-sm btn-outline-primary me-1 mb-1">Webinar</button>
+                <button class="btn btn-sm btn-outline-primary me-1 mb-1">Bootcamp</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Upcoming Events -->
+    <section class="mb-5">
+        <h2 class="text-center mb-4">Upcoming Events</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="training-card card">
+                    <div class="position-relative">
+                        <img src="ai.jpg" class="card-img-top" alt="Training 1">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">Jul</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge badge-hybrid bg-primary">Hybrid</span>
+                            <span class="text-muted">5 Hari</span>
+                        </div>
+                        <h3>Bootcamp Smart Farming: IoT untuk Perkebunan</h3>
+                        <p>Program intensif penerapan teknologi IoT untuk monitoring dan otomatisasi perkebunan.</p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span><strong>Rp 5.500.000</strong></span>
+                            <a href="#register" class="btn btn-sm btn-outline-success">Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="training-card card">
+                    <div class="position-relative">
+                        <img src="🌐⛓️ Understanding Blockchain_ The Key to Crypto & Smart Contracts.jpg" class="card-img-top" alt="Training 2">
+                        <div class="event-date">
+                            <span class="day">22</span>
+                            <span class="month">Jul</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge badge-online bg-primary">Online</span>
+                            <span class="text-muted">2 Jam</span>
+                        </div>
+                        <h3>Webinar: Blockchain untuk Rantai Pasok Agrikultur</h3>
+                        <p>Webinar tentang implementasi teknologi blockchain untuk transparansi rantai pasok.</p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span><strong>Gratis</strong></span>
+                            <a href="#" class="btn btn-sm btn-outline-success">Daftar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="training-card card">
+                    <div class="position-relative">
+                        <img src="hahah.jpg" class="card-img-top" alt="Training 3">
+                        <div class="event-date">
+                            <span class="day">5</span>
+                            <span class="month">Ags</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge badge-offline bg-danger">Offline</span>
+                            <span class="text-muted">2 Hari</span>
+                        </div>
+                        <h3>Workshop: Drone untuk Precision Agriculture</h3>
+                        <p>Pelatihan hands-on penggunaan drone untuk pemetaan dan monitoring perkebunan.</p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span><strong>Rp 2.500.000</strong></span>
+                            <a href="#" class="btn btn-sm btn-outline-success">Daftar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="training-card card">
+                    <div class="position-relative">
+                        <img src="1.jpg" class="card-img-top" alt="Training 4">
+                        <div class="event-date">
+                            <span class="day">12</span>
+                            <span class="month">Ags</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge badge-online bg-primary">Online</span>
+                            <span class="text-muted">1 Hari</span>
+                        </div>
+                        <h3>Online Course: Analitik Data untuk Perkebunan</h3>
+                        <p>Kursus online tentang penggunaan tools analitik data untuk optimalisasi perkebunan.</p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span><strong>Rp 950.000</strong></span>
+                            <a href="#" class="btn btn-sm btn-outline-success">Daftar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="training-card card">
+                    <div class="position-relative">
+                        <img src="pp.jpg" class="card-img-top" alt="Training 5">
+                        <div class="event-date">
+                            <span class="day">20</span>
+                            <span class="month">Ags</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge badge-hybrid bg-primary">Hybrid</span>
+                            <span class="text-muted">3 Hari</span>
+                        </div>
+                        <h3>Conference: Future of Agriculture Technology</h3>
+                        <p>Konferensi internasional membahas masa depan teknologi pertanian dan perkebunan.</p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span><strong>Rp 3.750.000</strong></span>
+                            <a href="#" class="btn btn-sm btn-outline-success">Daftar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="training-card card">
+                    <div class="position-relative">
+                        <img src="frd (1).jpg" class="card-img-top" alt="Training 6">
+                        <div class="event-date">
+                            <span class="day">28</span>
+                            <span class="month">Ags</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge badge-offline bg-danger">Offline</span>
+                            <span class="text-muted">1 Hari</span>
+                        </div>
+                        <h3>Field Trip: Smart Farm Visit</h3>
+                        <p>Kunjungan langsung ke perkebunan yang telah mengimplementasikan teknologi smart farming.</p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span><strong>Rp 1.200.000</strong></span>
+                            <a href="#" class="btn btn-sm btn-outline-success">Daftar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Training Calendar -->
+    <section class="calendar-section mb-5">
+        <h2 class="text-center mb-4">Kalender Event</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Senin</th>
+                                <th>Selasa</th>
+                                <th>Rabu</th>
+                                <th>Kamis</th>
+                                <th>Jumat</th>
+                                <th>Sabtu</th>
+                                <th>Minggu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="height: 100px;">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="bg-light">1<br><small class="text-success">Webinar IoT</small></td>
+                                <td class="bg-light">2</td>
+                            </tr>
+                            <tr style="height: 100px;">
+                                <td class="bg-light">3</td>
+                                <td class="bg-light">4</td>
+                                <td class="bg-light">5</td>
+                                <td class="bg-light">6</td>
+                                <td class="bg-light">7</td>
+                                <td class="bg-light">8</td>
+                                <td class="bg-light">9</td>
+                            </tr>
+                            <tr style="height: 100px;">
+                                <td class="bg-light">10</td>
+                                <td class="bg-light">11</td>
+                                <td class="bg-light">12</td>
+                                <td class="bg-light">13</td>
+                                <td class="bg-light">14</td>
+                                <td class="bg-light">15<br><small class="text-success">Bootcamp IoT</small></td>
+                                <td class="bg-light">16<br><small class="text-success">Bootcamp IoT</small></td>
+                            </tr>
+                            <tr style="height: 100px;">
+                                <td class="bg-light">17<br><small class="text-success">Bootcamp IoT</small></td>
+                                <td class="bg-light">18<br><small class="text-success">Bootcamp IoT</small></td>
+                                <td class="bg-light">19<br><small class="text-success">Bootcamp IoT</small></td>
+                                <td class="bg-light">20</td>
+                                <td class="bg-light">21</td>
+                                <td class="bg-light">22<br><small class="text-primary">Webinar Blockchain</small></td>
+                                <td class="bg-light">23</td>
+                            </tr>
+                            <tr style="height: 100px;">
+                                <td class="bg-light">24</td>
+                                <td class="bg-light">25</td>
+                                <td class="bg-light">26</td>
+                                <td class="bg-light">27</td>
+                                <td class="bg-light">28</td>
+                                <td class="bg-light">29</td>
+                                <td class="bg-light">30</td>
+                            </tr>
+                            <tr style="height: 100px;">
+                                <td class="bg-light">31</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Detail Registration -->
+    <section id="register" class="mb-5">
+        <h2 class="text-center mb-4">Bootcamp Smart Farming: IoT untuk Perkebunan 4.0</h2>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="course-curriculum mb-4">
+                    <h3>Curriculum</h3>
+                    <div class="curriculum-item">
+                        <h4>Hari 1: Dasar-dasar IoT</h4>
+                        <p>Pengenalan konsep IoT, komponen, dan aplikasinya dalam perkebunan.</p>
+                    </div>
+                    <div class="curriculum-item">
+                        <h4>Hari 2: Sensor dan Perangkat</h4>
+                        <p>Berbagai jenis sensor untuk monitoring tanah, air, dan kondisi cuaca.</p>
+                    </div>
+                    <div class="curriculum-item">
+                        <h4>Hari 3: Pengumpulan dan Analisa Data</h4>
+                        <p>Setup sistem pengumpulan data dan platform analitik untuk perkebunan.</p>
+                    </div>
+                    <div class="curriculum-item">
+                        <h4>Hari 4: Otomatisasi Perkebunan</h4>
+                        <p>Implementasi sistem otomatisasi irigasi dan pemupukan berbasis IoT.</p>
+                    </div>
+                    <div class="curriculum-item">
+                        <h4>Hari 5: Proyek Implementasi</h4>
+                        <p>Praktik langsung membuat mini-project IoT untuk perkebunan.</p>
+                    </div>
+                </div>
+                
+                <h3>Instruktur</h3>
+                <div class="trainer-profile">
+                    <img src="ai.jpg" alt="Instructor 1">
+                    <div>
+                        <h4>Dr. Budi Santoso</h4>
+                        <p class="mb-0">IoT Specialist dengan pengalaman 10+ tahun dalam implementasi teknologi perkebunan.</p>
+                    </div>
+                </div>
+                <div class="trainer-profile">
+                    <img src="IOT INTERNET OF THINGS.jpg" alt="Instructor 2">
+                    <div>
+                        <h4>Ir. Sarah Kusuma, M.Sc</h4>
+                        <p class="mb-0">Praktisi Smart Farming dan konsultan teknologi pertanian.</p>
+                    </div>
+                </div>
+                
+                <h3>Informasi Tambahan</h3>
+                <ul>
+                    <li>Pelatihan tersedia dalam format online dan offline</li>
+                    <li>Sertifikat resmi diberikan di akhir program</li>
+                    <li>Termasuk modul pembelajaran dan akses ke platform e-learning</li>
+                    <li>Disediakan makan siang dan coffee break untuk peserta offline</li>
+                    <li>Tersedia diskon khusus untuk pendaftaran kelompok (min. 3 orang)</li>
+                </ul>
+            </div>
+            <div class="col-md-5">
+                <div class="registration-form">
+                    <h3 class="text-center mb-4">Daftar Sekarang</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Nomor Telepon</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="institution" class="form-label">Instansi/Perusahaan</label>
+                            <input type="text" class="form-control" id="institution" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="position" class="form-label">Jabatan</label>
+                            <input type="text" class="form-control" id="position" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Format Pelatihan</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="format" id="offline" value="offline" checked>
+                                <label class="form-check-label" for="offline">
+                                    Offline (Jakarta)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="format" id="online" value="online">
+                                <label class="form-check-label" for="online">
+                                    Online (Live Streaming)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="special" class="form-label">Kebutuhan Khusus (opsional)</label>
+                            <textarea class="form-control" id="special" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Kirim Pendaftaran</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Custom Training -->
+    <section class="text-center py-5 mb-5 bg-light rounded">
+        <h2>Butuh Pelatihan Sesuai Kebutuhan Perusahaan?</h2>
+        <p class="lead">Kami menyediakan program training custom yang disesuaikan dengan kebutuhan spesifik organisasi Anda</p>
+        <a href="contact.html" class="btn btn-success btn-lg">Konsultasi Training Custom</a>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="container py-5">
+    <div class="row">
+        <div class="col-12 col-md">
+            <p>&copy; 2024 Teknologi dan Inovasi Perkebunan. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html> 

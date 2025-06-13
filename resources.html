@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Resources Teknologi Perkebunan">
+    <title>Resources - Teknologi dan Inovasi Perkebunan</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('pp.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+        
+        .resource-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .resource-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #198754;
+        }
+        
+        .download-count {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        
+        .resource-type {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            background-color: #e9ecef;
+        }
+        
+        .type-ebook {
+            background-color: #cfe2ff;
+            color: #0d6efd;
+        }
+        
+        .type-whitepaper {
+            background-color: #d1e7dd;
+            color: #198754;
+        }
+        
+        .type-guide {
+            background-color: #f8d7da;
+            color: #dc3545;
+        }
+        
+        .type-video {
+            background-color: #fff3cd;
+            color: #ffc107;
+        }
+        
+        .filter-btn {
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .featured-resource {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">TEKNOLOGI DAN INOVASI PERKEBUNAN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="technology.html">Teknologi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.php">Produk & Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="case-studies.html">Studi Kasus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="resources.html">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="training.html">Training</a></li>
+                    <li class="nav-item"><a class="nav-link" href="partnership.html">Partnership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Resources</h1>
+        <p class="lead">Kumpulan E-Book, Whitepaper, Tutorial, dan Materi Edukasi tentang Teknologi Perkebunan</p>
+    </div>
+</section>
+
+<main class="container">
+    <!-- Search and Filter -->
+    <section class="mb-5">
+        <div class="row">
+            <div class="col-md-6">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Cari resources..." aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Cari</button>
+                </form>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <button class="btn btn-sm btn-outline-primary filter-btn">Semua</button>
+                <button class="btn btn-sm btn-outline-primary filter-btn">E-Book</button>
+                <button class="btn btn-sm btn-outline-primary filter-btn">Whitepaper</button>
+                <button class="btn btn-sm btn-outline-primary filter-btn">Video</button>
+                <button class="btn btn-sm btn-outline-primary filter-btn">Panduan</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Resource -->
+    <section class="featured-resource">
+        <div class="row">
+            <div class="col-md-6">
+                <span class="badge bg-success mb-2">Baru Rilis</span>
+                <h2>Panduan Lengkap Implementasi IoT di Perkebunan</h2>
+                <p class="lead">Pelajari cara mengimplementasikan teknologi IoT untuk meningkatkan produktivitas dan efisiensi perkebunan Anda.</p>
+                <p>E-Book ini mencakup panduan step-by-step mulai dari pemilihan sensor, instalasi, konfigurasi, hingga analisis data. Cocok untuk pengelola perkebunan yang ingin memulai digitalisasi.</p>
+                <div class="d-flex align-items-center mb-3">
+                    <span class="me-3"><strong>40 Halaman</strong></span>
+                    <span class="me-3">PDF</span>
+                    <span>5,2 MB</span>
+                </div>
+                <a href="#" class="btn btn-primary">Download E-Book</a>
+            </div>
+            <div class="col-md-6">
+                <img src="IOT INTERNET OF THINGS.jpg" class="img-fluid rounded" alt="E-Book Cover">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Tutorial -->
+    <section class="mb-5">
+        <h2 class="text-center mb-4">Video Tutorial Terbaru</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="video-container mb-3">
+                    <!-- Placeholder untuk video - ganti src dengan video Anda -->
+                    <iframe src="about:blank" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h3>Tutorial: Monitoring Perkebunan dengan Drone</h3>
+                <p>Pelajari teknik dasar penggunaan drone untuk monitoring dan pemetaan area perkebunan. Video ini mencakup cara pengoperasian drone, pengaturan kamera, dan analisis hasil pencitraan.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- E-Books and Whitepapers -->
+    <section class="mb-5">
+        <h2 class="text-center mb-4">E-Books & Whitepapers</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="resource-card card">
+                    <div class="card-body text-center">
+                        <span class="resource-type type-ebook">E-Book</span>
+                        <div class="resource-icon">📘</div>
+                        <h3>Smart Farming untuk Pemula</h3>
+                        <p>Panduan dasar untuk memulai implementasi smart farming di perkebunan skala kecil hingga menengah.</p>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>25 Halaman</span>
+                            <span class="download-count">3.5K Downloads</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary w-100">Download</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="resource-card card">
+                    <div class="card-body text-center">
+                        <span class="resource-type type-whitepaper">Whitepaper</span>
+                        <div class="resource-icon">📝</div>
+                        <h3>Teknologi Blockchain dalam Rantai Pasok Pertanian</h3>
+                        <p>Analisis mendalam tentang implementasi blockchain untuk transparansi dan keamanan rantai pasok.</p>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>18 Halaman</span>
+                            <span class="download-count">2.1K Downloads</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary w-100">Download</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="resource-card card">
+                    <div class="card-body text-center">
+                        <span class="resource-type type-guide">Panduan</span>
+                        <div class="resource-icon">📚</div>
+                        <h3>Optimalisasi Penggunaan Air dengan IoT</h3>
+                        <p>Panduan praktis untuk mengimplementasikan sistem irigasi otomatis berbasis IoT.</p>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>32 Halaman</span>
+                            <span class="download-count">4.2K Downloads</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary w-100">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="resource-card card">
+                    <div class="card-body text-center">
+                        <span class="resource-type type-whitepaper">Whitepaper</span>
+                        <div class="resource-icon">📊</div>
+                        <h3>Analisis Big Data untuk Perkebunan Modern</h3>
+                        <p>Whitepaper tentang pendekatan analitik data untuk optimalisasi dan pengambilan keputusan.</p>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>22 Halaman</span>
+                            <span class="download-count">1.8K Downloads</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary w-100">Download</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="resource-card card">
+                    <div class="card-body text-center">
+                        <span class="resource-type type-ebook">E-Book</span>
+                        <div class="resource-icon">📗</div>
+                        <h3>Pertanian Presisi: Teori dan Implementasi</h3>
+                        <p>E-Book komprehensif tentang pertanian presisi dan aplikasinya dalam perkebunan modern.</p>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>45 Halaman</span>
+                            <span class="download-count">2.7K Downloads</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary w-100">Download</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="resource-card card">
+                    <div class="card-body text-center">
+                        <span class="resource-type type-guide">Panduan</span>
+                        <div class="resource-icon">🔍</div>
+                        <h3>Mendeteksi Hama dan Penyakit dengan AI</h3>
+                        <p>Panduan menggunakan kecerdasan buatan untuk deteksi dini hama dan penyakit tanaman.</p>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>28 Halaman</span>
+                            <span class="download-count">3.3K Downloads</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary w-100">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Tutorials -->
+    <section class="mb-5">
+        <h2 class="text-center mb-4">Video Tutorials</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="resource-card card">
+                    <img src="ai.jpg" class="card-img-top" alt="Video Tutorial">
+                    <div class="card-body">
+                        <span class="resource-type type-video">Video</span>
+                        <h3>Instalasi Sensor IoT di Perkebunan</h3>
+                        <p>Tutorial step-by-step untuk instalasi dan konfigurasi sensor IoT di area perkebunan.</p>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>15:30 Menit</span>
+                            <span class="download-count">6.8K Views</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary w-100">Tonton Video</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="resource-card card">
+                    <img src="hahah.jpg" class="card-img-top" alt="Video Tutorial">
+                    <div class="card-body">
+                        <span class="resource-type type-video">Video</span>
+                        <h3>Analisis Data Perkebunan dengan Power BI</h3>
+                        <p>Tutorial cara membuat dashboard analitik untuk memvisualisasikan data perkebunan.</p>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>22:45 Menit</span>
+                            <span class="download-count">4.2K Views</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary w-100">Tonton Video</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="resource-card card">
+                    <img src="2.jpg" class="card-img-top" alt="Video Tutorial">
+                    <div class="card-body">
+                        <span class="resource-type type-video">Video</span>
+                        <h3>Penggunaan Drone untuk Pemetaan Perkebunan</h3>
+                        <p>Panduan lengkap menggunakan drone untuk pemetaan dan monitoring area perkebunan.</p>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span>18:15 Menit</span>
+                            <span class="download-count">5.6K Views</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-primary w-100">Tonton Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Research Papers -->
+    <section class="mb-5">
+        <h2 class="text-center mb-4">Research Papers</h2>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Judul</th>
+                        <th>Penulis</th>
+                        <th>Tahun</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Efektivitas Teknologi IoT dalam Monitoring Kelembaban Tanah di Perkebunan Kelapa Sawit</td>
+                        <td>Dr. Budi Santoso, et al.</td>
+                        <td>2023</td>
+                        <td><a href="#" class="btn btn-sm btn-outline-primary">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Analisis Komparatif Penggunaan Drone vs Metode Konvensional dalam Pemetaan Perkebunan</td>
+                        <td>Ir. Sarah Kusuma, M.Sc</td>
+                        <td>2023</td>
+                        <td><a href="#" class="btn btn-sm btn-outline-primary">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Implementasi Blockchain untuk Transparansi Rantai Pasok Kopi Arabika</td>
+                        <td>Prof. Agus Wijaya, PhD</td>
+                        <td>2022</td>
+                        <td><a href="#" class="btn btn-sm btn-outline-primary">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Peningkatan Akurasi Prediksi Hasil Panen menggunakan Model Machine Learning</td>
+                        <td>Tim Peneliti Teknologi Perkebunan</td>
+                        <td>2022</td>
+                        <td><a href="#" class="btn btn-sm btn-outline-primary">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Studi Dampak Ekonomi Implementasi Smart Farming pada Perkebunan Skala Menengah</td>
+                        <td>Dr. Maya Indira, et al.</td>
+                        <td>2021</td>
+                        <td><a href="#" class="btn btn-sm btn-outline-primary">Download</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <!-- Request Custom Resource -->
+    <section class="text-center py-5 mb-5 bg-light rounded">
+        <h2>Tidak Menemukan Yang Anda Cari?</h2>
+        <p class="lead">Tim kami siap membantu menyediakan materi edukasi sesuai kebutuhan spesifik Anda</p>
+        <a href="contact.html" class="btn btn-success btn-lg">Minta Resource Custom</a>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="container py-5">
+    <div class="row">
+        <div class="col-12 col-md">
+            <p>&copy; 2024 Teknologi dan Inovasi Perkebunan. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html> 
